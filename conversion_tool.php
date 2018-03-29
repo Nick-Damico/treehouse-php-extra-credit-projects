@@ -33,7 +33,7 @@ echo "What?! Not familiar with Kilograms?\n";
 echo "Well, then I weigh ";
 echo $weight_total_kg * $kg_to_lbs;
 echo "lbs.\n";
-echo "\n\n";
+echo "\n";
 
 // Unit distance coversions;
 $mile_to_km = 1.60934;
@@ -49,5 +49,18 @@ echo "What?! You aren't familiar with km either?\n";
 echo "Well thats ";
 echo $distance_work_km * $km_to_mile;
 echo " miles from home.\n";
+echo "\n";
+
+// Temp Conversion F to C.
+$temp_f = 65;
+/*
+  Conversion Formulas
+  F to C = (temp_f - 32) * (5/9)
+  C to F = (temp_c * 9/5) + 32
+*/
+echo "Its currently 65 degrees in Gatlinburg, TN\n";
+echo " or ";
+echo ($temp_f - 32) * (5/9);
+echo " degree Celsius.\n";
 
  ?>
