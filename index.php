@@ -1,6 +1,18 @@
 <?php
 $display_name = "Nicholas D'Amico";
 $year = date("Y");
+date_default_timezone_set('America/New_York');
+$current_date = Date("M j, h:m a");
+$time_of_day = Date("a");
+$hour_day = Date("h");
+
+if ($time_of_day == "am") {
+  $welcome_msg = "Good Morning!";
+} elseif ($hour_day <= 5) {
+  $welcome_msg = "Good Afternoon!";
+} else {
+  $welcome_msg = "Good Evening.";
+}
 ?>
 
 <!DOCTYPE html>
@@ -25,16 +37,21 @@ $year = date("Y");
             <li><a href=""><span class="icon twitter"></span></a></li>
           </ul>
           <hr />
-          <p>Today: D, d M Y</p>
+          <p>Today: <?php echo $current_date; ?></p>
+          <p>
+
+          </p>
         </section>
         <section class="main">
+          <i><?php echo $welcome_msg; ?> Welcome to</i>
           <h1>My First PHP Page</h1>
 
           <h2>Unit Conversion</h2>
-
+            <?php include 'inc/units.php'; ?>
           <hr />
 
           <h2>Daily Exercise</h2>
+            <?php include 'inc/exercise.php'; ?>
         </section>
     </div>
     <section class="footer text-center">

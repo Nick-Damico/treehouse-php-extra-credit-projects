@@ -61,8 +61,8 @@ switch ($day_of_week) {
     break;
 }
 
-$output_msg = "It's $day_str, that means practice PHP exercise \"";
-$output_msg .= $exercise_todo. "\".\n";
+$output_msg = "<p>It's $day_str, that means practice PHP exercise, <br />";
+$output_msg .= "\"" . $exercise_todo. "\".\n";
 
 echo $output_msg;
 
